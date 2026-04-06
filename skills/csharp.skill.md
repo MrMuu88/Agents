@@ -1,7 +1,3 @@
----
-applyTo: "DatabaseManager-Api/**"
----
-
 # Rules and Best Practices for C# / .NET
 
 ## General C# and .NET Standards
@@ -15,7 +11,6 @@ applyTo: "DatabaseManager-Api/**"
 
 ## Project and Layering Guidelines
 
-- Treat `DatabaseManager-Api` as the HTTP/API boundary for the system.
 - Keep request/response shaping, routing, and protocol concerns at the API layer.
 - Place business logic in dedicated services or domain classes, not directly in controllers or minimal-API lambdas.
 - Keep infrastructure concerns (data access, external integrations) behind clear abstractions where complexity grows.
@@ -43,7 +38,7 @@ applyTo: "DatabaseManager-Api/**"
 - Do not embed connection strings or credentials in code; rely on configuration and secrets management.
 - Handle concurrency and transaction boundaries explicitly when needed; do not rely on implicit behavior.
 - **After every change to a DAL model class or `AppDbContext` configuration** (adding/removing entities, properties, indexes, relationships, or seed data), always:
-  1. Generate a new migration: `dotnet ef migrations add <DescriptiveMigrationName>` (run from `DatabaseManager-Api/`).
+  1. Generate a new migration: `dotnet ef migrations add <DescriptiveMigrationName>`
   2. Review the generated migration file in `DAL/Migrations/` to confirm it reflects only the intended changes.
   3. Apply it to the local database: `dotnet ef database update`.
 - Use descriptive migration names that reflect the change (e.g., `AddAuditEvents`, `AddUserEmailIndex`, `SeedDefaultRoles`).

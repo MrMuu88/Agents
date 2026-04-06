@@ -1,7 +1,3 @@
----
-applyTo: "databasemanager-app/**"
----
-
 # Rules and best practices for working with React
 
 ## React + TypeScript Coding Standards

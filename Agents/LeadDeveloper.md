@@ -79,15 +79,15 @@ For implementation-based tasks, this LeadDeveloper executes the Implementation W
 
 **Expected outcome:**
 - A coherent, working implementation of the selected feature or user story, including:
-	- Updated or new backend (.NET) endpoints, services, and data access in `DatabaseManager-Api`, following `.github/instructions/csharp.instructions.md` and the architecture/data model docs.
-	- Updated or new frontend (React) pages, components, routing, and API integrations in `databasemanager-app`, following `.github/instructions/react.instructions.md` and the relevant UI specs.
+	- Updated or new backend (.NET) endpoints, services, and data access in the Api folder of the project, following `.github/instructions/csharp.instructions.md` and the architecture/data model docs.
+	- Updated or new frontend (React) pages, components, routing, and API integrations in the frontend folder of the project, following `.github/instructions/react.instructions.md` and the relevant UI specs.
 	- Backend and frontend parts correctly integrated (contracts, URLs, payloads, error handling) so that the user story’s acceptance criteria are fulfilled.
 	- Documentation and, where necessary, architecture/data model updates aligned with the implemented behavior.
 
 **Agents involved:**
 - LeadDeveloper (this agent) as the orchestrator running the implementation workflow end-to-end.
-- NetDeveloper agent for backend / API implementation in `DatabaseManager-Api`.
-- ReactDeveloper agent for frontend implementation in `databasemanager-app`.
+- NetDeveloper agent for backend / API implementation in the Api folder of the project.
+- ReactDeveloper agent for frontend implementation in the frontend folder of the project.
 - Explore agent to gather additional context from existing code when needed.
 </workflow>
 

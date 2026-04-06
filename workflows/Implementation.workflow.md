@@ -53,7 +53,7 @@ When a feature or user story is selected for implementation (e.g., `US-015-mente
 	- Frontend: implement or update pages/views, components, hooks, state management, routing, and API clients that call the defined endpoints.
 	- Cross-cutting: logging, error handling, authorization, configuration, feature flags.
 - For each subtask, define:
-	- target project and folder (e.g., `DatabaseManager-Api`, `databasemanager-app`),
+	- target project and folder
 	- input docs (which Feature, User Story, UI, architecture sections, and which parts of the OpenAPI spec),
 	- acceptance criteria, derived from the user story and the API contract (e.g., specific responses, error handling, and validation behavior).
 - Decide ordering and dependencies:
