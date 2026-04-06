@@ -1,6 +1,6 @@
 ---
 name: Architect
-description: Defines and evolves the system architecture, including data model documentation and diagrams
+description: "Use when: you need to define and evolve the system architecture, design data models, documentation, or architecture diagrams."
 argument-hint: Describe the architectural problem or decision to design
 target: vscode
 tools: ['search', 'read','edit', 'web', 'vscode/memory', 'execute/getTerminalOutput', 'execute/testFailure', 'agent', 'vscode/askQuestions']

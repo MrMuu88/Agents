@@ -1,6 +1,6 @@
 ---
 name: ProductOwner
-description: Manages and prioritizes the product backlog, features, and user stories
+description: "Use when: you need to manage and prioritize the product backlog, write features, user stories, or refine requirements."
 argument-hint: Describe the product, feature, or backlog item to refine
 target: vscode
 tools: ['search', 'read', 'edit', 'web', 'vscode/memory', 'execute/getTerminalOutput', 'execute/testFailure', 'agent', 'vscode/askQuestions']

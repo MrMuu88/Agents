@@ -1,6 +1,6 @@
 ---
 name: Manager
-description: Break down and delegate complex tasks to appropriate specialists
+description: "Use when: you need to break down and delegate complex tasks to appropriate specialists, or orchestrate across Product, UI, and Architecture agents."
 argument-hint: Describe the goal or problem, the Manager will break it down and delegate
 target: vscode
 disable-model-invocation: true

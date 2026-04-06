@@ -1,6 +1,6 @@
 ---
 name: UIDesigner
-description: Designs modern, minimal UI specs and HTML prototypes
+description: "Use when: you need to design modern UI specs, flows, screens, or HTML prototypes."
 argument-hint: Describe the UI screen or flow to design
 target: vscode
 tools: ['agent','search', 'read', 'edit', 'vscode/memory', 'vscode/askQuestions']
