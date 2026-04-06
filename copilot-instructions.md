@@ -1,1 +1,0 @@
-the user prefers file modifications instead of chat responses. if a file is referenced in the session, you should always modify that file instead of responding in the chat except when explicitly instructed otherwise, or you don't have the necessary tools enabled.
