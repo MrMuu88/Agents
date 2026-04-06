@@ -61,25 +61,25 @@ When a feature or user story is selected for implementation (e.g., `US-015-mente
 	- then implement backend behavior and frontend integration against that contract,
 	- avoid ad-hoc contract changes during implementation; if changes are necessary, update the OpenAPI spec first, then propagate.
 
-### 4. Backend implementation (.NET / API)
+### 4. Backend implementation (Node.js / Electron)
 
-- Delegate backend-related subtasks to the **NetDeveloper** agent via the configured handoff, providing the relevant OpenAPI sections as the primary contract.
-- Expectations for NetDeveloper:
-	- Follow `.github/instructions/csharp.instructions.md` and architectural/data model instructions.
-	- Implement or update controllers/endpoints, application services, domain logic, data access, and mappings exactly according to the API contract.
+- Delegate backend-related subtasks to the **NodeJsDeveloper** agent via the configured handoff, providing the relevant API/IPC sections as the primary contract.
+- Expectations for NodeJsDeveloper:
+	- Follow `.github/instructions/Developer.instructions.md` and architectural/data model instructions.
+	- Implement or update IPC handlers, main process logic, data access (SQLite), and mappings exactly according to the contract.
 	- Ensure proper error handling, logging, authorization, and validation as described in the contract and user stories.
 	- Update or add unit/integration tests where appropriate, following project conventions and validating behavior against the contract.
 - Implementation environment:
 	- perform backend work in a dedicated implementation environment (e.g., feature branch, dev container, or separate workspace) to keep changes isolated until ready for integration.
 - The LeadDeveloper should:
 	- verify at a basic level that new/changed backend code aligns with the architecture and data model docs,
-	- check that the implemented endpoints, DTOs, and status codes match the OpenAPI contract and the needs of the frontend and UI specs.
+	- check that the implemented IPC handlers, payloads, and error objects match the contract and the needs of the frontend and UI specs.
 
 ### 5. Frontend implementation (React)
 
 - Delegate frontend-related subtasks to the **ReactDeveloper** agent via the configured handoff, providing the relevant UI specs and the API contract (OpenAPI) as inputs.
 - Expectations for ReactDeveloper:
-	- Follow `.github/instructions/react.instructions.md` and UI design instructions.
+	- Follow `.github/instructions/Developer.instructions.md` and UI design instructions.
 	- Implement or update React components, pages, routing, state management, and API integrations strictly against the contract (paths, methods, payloads, and responses).
 	- Respect UX and visual requirements from the relevant `Documentations/UI` files and `ProjectDesignDirectives.md`.
 	- Ensure proper error handling, loading states, and accessibility where applicable, consistent with the error models in the contract.
@@ -97,7 +97,7 @@ When a feature or user story is selected for implementation (e.g., `US-015-mente
 - Coordinate any cross-cutting concerns (e.g., authentication, authorization, logging) with existing patterns and ensure they are reflected in the contract when they affect requests/responses.
 - If integration reveals mismatches or missing capabilities:
 	- update the OpenAPI specification first to reflect the desired behavior,
-	- then create follow-up subtasks for NetDeveloper or ReactDeveloper to adjust their implementations to the updated contract.
+	- then create follow-up subtasks for NodeJsDeveloper or ReactDeveloper to adjust their implementations to the updated contract.
 
 ### 7. Verification and documentation updates
 
@@ -126,7 +126,7 @@ The following PlantUML sequence diagram summarizes how the contract-first implem
 actor User as U
 participant "LeadDeveloper" as LD
 participant "Architect" as ARCH
-participant "NetDeveloper" as ND
+participant "NodeJsDeveloper" as ND
 participant "ReactDeveloper" as RD
 database "Docs & Specs" as DOCS
 
@@ -142,7 +142,7 @@ LD -> DOCS: Store/align OpenAPI with docs
 
 LD -> ND: Handoff backend tasks
 ND -> DOCS: Read OpenAPI + architecture
-ND -> ND: Implement endpoints, domain logic, data access
+ND -> ND: Implement IPC handlers, domain logic, data access
 ND --> LD: Backend changes & test results
 
 LD -> RD: Handoff frontend tasks
