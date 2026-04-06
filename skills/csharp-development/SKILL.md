@@ -1,3 +1,8 @@
+---
+name: csharp-development
+description: "Use when: applying rules and best practices for C# and .NET development, including API design, EF Core data access, and general coding standards."
+---
+
 # Rules and Best Practices for C# / .NET
 
 ## General C# and .NET Standards

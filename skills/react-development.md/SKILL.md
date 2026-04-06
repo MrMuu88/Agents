@@ -1,3 +1,8 @@
+---
+name: react-development
+description: "Use when: applying rules and best practices for working with React and TypeScript, including component design, state management, formatting, and performance."
+---
+
 # Rules and best practices for working with React
 
 ## React + TypeScript Coding Standards
