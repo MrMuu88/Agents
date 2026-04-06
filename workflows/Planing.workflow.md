@@ -68,16 +68,17 @@ When a PRD file appears or is updated in the project root (e.g., `PRD_Database_m
 	whenever a PRD-based planning workflow introduces new features or changes that may impact the system design.
 - Instruct the Architect to:
 	- follow `.github/instructions/HighLevelArchitecture.instructions.md`, `.github/instructions/DataModels.instructions.md`, and their own agent rules,
-	- work primarily in `Documentations/Architecture/architecture.md`, keeping it aligned with:
+	- create and work primarily in `Documentations/Architecture/HighLevelArchitecture.md`, `BackendArchitecture.md`, and `FrontendArchitecture.md`, keeping it aligned with:
 		- the PRD (`PRD_Database_manager.md`),
 		- feature and user story docs under `Documentations/Features`,
 		- and the UI design docs under `Documentations/UI`.
 	- maintain `Documentations/Architecture/DataModels.md` and `Documentations/Architecture/DataModels.puml` so that the persisted data model is documented and consistent with the overall architecture.
 - Expect the Architect to cover at least:
 	- purpose and scope of the architecture update,
-	- architectural overview and runtime context,
-	- backend and frontend logical structure related to the new/changed features,
-	- data model/storage implications,
+	- architectural overview and runtime context (in `HighLevelArchitecture.md`),
+	- backend logical structure (in `BackendArchitecture.md`),
+	- frontend component hierarchy and UI shell (in `FrontendArchitecture.md`),
+	- data model/storage implications (in `DataModels.md`),
 	- security, compliance, and operational concerns at a high level.
 - Require that major architecture decisions, assumptions, and open questions are clearly documented so that
 	implementation-focused agents can safely continue from them.
@@ -89,7 +90,7 @@ When a PRD file appears or is updated in the project root (e.g., `PRD_Database_m
 	- every main function identified in the PRD has its own feature under `Documentations/Features`,
 	- every feature has associated user stories in the correct format,
 	- every relevant user story has at least one associated UI screen / flow (if the function requires UI),
-	- the high-level architecture in `Documentations/Architecture/architecture.md` is consistent with the PRD,
+	- all architectural documentation (`HighLevelArchitecture.md`, `BackendArchitecture.md`, `FrontendArchitecture.md`, `DataModels.md`) is consistent with the PRD,
 		features, user stories, and UI design,
 	- the `ProjectDesignDirectives.md` table is in sync with the actual UI folders and files.
 - If inconsistencies, conflicts, or contradictions are found, the Manager provides targeted feedback to the
