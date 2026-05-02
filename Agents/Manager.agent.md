@@ -58,12 +58,12 @@ For PRD-based tasks, this Manager executes the PRD Planning Workflow defined in 
 
 **Expected outcome:**
 - A complete, cross-referenced documentation set derived from the PRD, including:
-  - Feature descriptions and folders under `Documentations/Features`.
+  - Feature descriptions and related artifacts in the locations defined by the active documentation-structure instructions.
     - User stories for each feature, following `.github/instructions/Features_Userstories.instructions.md`.
-  - UI screen and flow specifications (MD + HTML prototypes) under `Documentations/UI`, linked to features and user stories.
-    - A maintained `ProjectDesignDirectives.md` summarizing the mapping between features, user stories, and UI elements.
+  - UI screen and flow specifications (MD + HTML prototypes) in the documented UI structure, linked to features and user stories.
+    - A maintained UI summary artifact that maps features, user stories, and UI elements.
     - screen prototipes following `.github/instructions/UI_Design.Instructions.md`.
-  - Updated high-level architecture and data model documentation under `Documentations/Architecture`, aligned with the PRD, features, stories, and UI.
+  - Updated high-level architecture and data model documentation in the documented architecture structure, aligned with the PRD, features, stories, and UI.
     - Architecture documentation following `.github/instructions/HighLevelArchitecture.instructions.md`.
     - Data model documentation following `.github/instructions/DataModels.instructions.md`.
 
