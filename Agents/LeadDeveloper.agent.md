@@ -25,7 +25,12 @@ handoffs:
 ## Skills
 
 - Use Explore when existing code patterns, folder structure, or prior implementations must be understood before delegation.
-- Follow the Implementation Workflow in `.github/workflows/Implementation.workflow.md` for feature-level tasks.
+- Always use `implementation-core` for every feature/user story implementation request.
+- Then select exactly one stack adapter skill based on project documentation and code context:
+  - Use `implementation-electron-desktop` when README and code indicate Electron + IPC integration.
+  - Use `implementation-webapp-aspnet` when README and code indicate ASP.NET backend + HTTP API integration.
+- Determine adapter selection from repository `Readme.md` and subproject README files first; use Explore only to resolve ambiguity.
+- If no adapter can be selected confidently, stop and ask one targeted clarification question before delegating implementation tasks.
 
 ## Rules
 
