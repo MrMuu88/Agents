@@ -52,4 +52,4 @@ As a [user role], I want to [goal] so that [reason].
 
 ## Language Rules
 - The “As a...” sentence MUST always be in English.
-- The rest of the content (titles, Acceptance Criteria) may be in Hungarian or English depending on project context (default to Hungarian for ACs if unsure, unless English is requested).
+- Titles, acceptance criteria, and explanatory content MUST be in English.

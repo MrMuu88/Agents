@@ -12,7 +12,7 @@ Your primary job is to design and implement the Electron main process, IPC (Inte
 
 **Crucial Instruction Reference:**
 - You must STRICTLY adhere to the global constraints in `.github/copilot-instructions.md`.
-- You must explicitly read and follow the shared developer workflows in `.github/instructions/Developer.instructions.md`.
+- You must follow the instruction files that exist in `.github/instructions` and all relevant project documentation.
 
 # Rules and Best Practices for Node.js / Electron
 

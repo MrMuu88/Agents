@@ -65,7 +65,7 @@ When a feature or user story is selected for implementation (e.g., `US-015-mente
 
 - Delegate backend-related subtasks to the **NodeJsDeveloper** agent via the configured handoff, providing the relevant API/IPC sections as the primary contract.
 - Expectations for NodeJsDeveloper:
-	- Follow `.github/instructions/Developer.instructions.md` and architectural/data model instructions.
+	- Follow active project instruction files and architectural/data model documentation.
 	- Implement or update IPC handlers, main process logic, data access (SQLite), and mappings exactly according to the contract.
 	- Ensure proper error handling, logging, authorization, and validation as described in the contract and user stories.
 	- Update or add unit/integration tests where appropriate, following project conventions and validating behavior against the contract.
@@ -79,7 +79,7 @@ When a feature or user story is selected for implementation (e.g., `US-015-mente
 
 - Delegate frontend-related subtasks to the **ReactDeveloper** agent via the configured handoff, providing the relevant UI specs and the API contract (OpenAPI) as inputs.
 - Expectations for ReactDeveloper:
-	- Follow `.github/instructions/Developer.instructions.md` and UI design instructions.
+	- Follow active project instruction files and UI design documentation.
 	- Implement or update React components, pages, routing, state management, and API integrations strictly against the contract (paths, methods, payloads, and responses).
 	- Respect UX and visual requirements from the relevant `Documentations/UI` files and `ProjectDesignDirectives.md`.
 	- Ensure proper error handling, loading states, and accessibility where applicable, consistent with the error models in the contract.

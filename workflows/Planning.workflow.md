@@ -59,8 +59,8 @@ When a PRD file appears or is updated in the project root (e.g., `PRD_Database_m
 	(in the form of identifiers and file references).
 - The UIDesigner is responsible for maintaining the `Documentations/UI/ProjectDesignDirectives.md` file, containing a
 	summary table that shows:
-	- feature → associated UI identifiers,
-	- user story → associated UI screens / flows.
+	- feature -> associated UI identifiers,
+	- user story -> associated UI screens / flows.
 
 ### 5. Technical Architecture (Architect Agent)
 

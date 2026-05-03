@@ -54,7 +54,7 @@ Provide the following defined structure in the `.md`:
 
 ## Step 3: Write HTML Prototype (.html)
 - Ensure the result is a fully standalone HTML5 document.
-- Must include an embedded `<style>` block using the design tokens from the chosen style definition (see **Available Design Style Definitions** above, or fall back to Anthracite Modern / Green/White Clean from `UIDesignSystems.instructions.md`).
+- Must include an embedded `<style>` block using the design tokens from the chosen style definition (see **Available Design Style Definitions** above).
 - Must use distinct CSS pseudo-classes (`:hover`, `:active`, `:focus-visible`) for all interactive elements.
 - Ensure semantic layout matching the hierarchy (`<nav>`, `<main>`, `<aside>`).
 
