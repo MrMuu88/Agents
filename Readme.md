@@ -336,3 +336,13 @@ To improve this repository:
 ---
 
 **Questions?** Ask `@Librarian` how something works, or refer to individual agent `.md` files for detailed role definitions.
+
+# TODO
+- the system specific  sections in the develeoper agents should be confiugred differently I belive. I need to work on this
+- implementation workflow has to be restructured to be a skill
+- UI designs should be reworked a bit, to be more distinctive
+   - Antracite is totaly off, the whole design has to be redone from scratch
+   - Aurora need soem furter definition
+   - green white as well
+   - I belive I need a fourth style to have 2 dark, and 2 light themed styles
+- LLM wiki building should be introduced into the whole thing, right now it's a RAG system, every agent reviews the required documentation on every request.
