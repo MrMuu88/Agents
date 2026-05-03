@@ -36,11 +36,13 @@ tools: ['search', 'read', 'edit', 'execute', 'browser', 'web', 'vscode/askQuesti
 
 ## Workflow
 
-1. Read the feature, user story, and architecture documentation before writing any code.
-2. Use Explore if existing IPC patterns, services, or data access code must be understood first.
-3. Implement or update the IPC handler, service, and data access layer in the correct folders.
-4. Apply or update schema migrations if the data model changes.
-5. Verify the output matches the documented IPC contract and data model.
+1. **Check session memory** at the start for any prior IPC contract decisions or data model notes for this feature.
+2. Read the feature, user story, and architecture documentation before writing any code.
+3. Use Explore if existing IPC patterns, services, or data access code must be understood first.
+4. Implement or update the IPC handler, service, and data access layer in the correct folders.
+5. Apply or update schema migrations if the data model changes.
+6. **Store the implemented IPC channel names, payloads, and key patterns in session memory** so frontend can coordinate.
+7. Verify the output matches the documented IPC contract and data model.
 
 ## Output
 

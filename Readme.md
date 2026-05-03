@@ -336,7 +336,6 @@ To improve this repository:
 **Questions?** Ask `@Librarian` how something works, or refer to individual agent `.md` files for detailed role definitions.
 
 # TODO
-- The Planing Agnest should ask questions. right now they have thew asq tool, but it is not used. I think it's because it is not configured
 
 - LLM wiki building should be introduced into the whole thing, right now it's a RAG system, every agent reviews the required documentation on every request.
 

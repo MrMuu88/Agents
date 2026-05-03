@@ -51,18 +51,20 @@ handoffs:
 
 ## Workflow
 
-1. Read the request and decide whether it is PRD-driven planning or a smaller coordination task.
-2. **If the request is ambiguous or missing scope clarity, invoke the askQuestions tool** with:
+1. **Check session memory** at the start for prior delegation context, cross-team decisions, or blocked items.
+2. Read the request and decide whether it is PRD-driven planning or a smaller coordination task.
+3. **If the request is ambiguous or missing scope clarity, invoke the askQuestions tool** with:
    - **Scope**: What is the end goal and what are the boundaries?
    - **User impact**: Who benefits and what problem does this solve?
    - **Priority workstreams**: Should this focus on product, UI, architecture, or all three?
    - **Constraints**: Are there timeline, technical, or resource constraints?
-3. Use Explore if repository context or document structure is unclear.
-4. Break the task into product, UI, and architecture workstreams as needed.
-5. Delegate each workstream to the correct specialist with precise instructions.
-5. Review the returned outputs for location, naming, and cross-reference consistency.
-6. Trigger corrective follow-up delegation if any output is incomplete or inconsistent.
-7. Finish when the documentation set is coherent, or stop early if a blocker prevents valid progress.
+4. Use Explore if repository context or document structure is unclear.
+5. Break the task into product, UI, and architecture workstreams as needed.
+6. Delegate each workstream to the correct specialist with precise instructions.
+7. **Update session memory** with delegated tasks, target specialists, and coordination notes.
+8. Review the returned outputs for location, naming, and cross-reference consistency.
+9. Trigger corrective follow-up delegation if any output is incomplete or inconsistent.
+10. Finish when the documentation set is coherent, or stop early if a blocker prevents valid progress.
 
 ## Output
 

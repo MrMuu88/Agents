@@ -47,13 +47,15 @@ handoffs:
 
 ## Workflow
 
-1. Read the request and determine the backend, frontend, and integration scope.
-2. Use Explore if existing patterns or code context must be understood first.
-3. Delegate backend tasks to NodeJsDeveloper with relevant documentation references.
-4. Delegate frontend tasks to ReactDeveloper with relevant UI spec and user story references.
-5. Verify that the returned outputs are consistent with each other and with the documented contracts.
-6. Trigger corrective re-delegation if outputs are incomplete or misaligned.
-7. Finish when backend and frontend work together to fulfill the acceptance criteria, or stop if a blocker prevents valid progress.
+1. **Check session memory** at the start to review any prior context, decisions, or progress on this feature.
+2. Read the request and determine the backend, frontend, and integration scope.
+3. Use Explore if existing patterns or code context must be understood first.
+4. Delegate backend tasks to NodeJsDeveloper with relevant documentation references.
+5. Delegate frontend tasks to ReactDeveloper with relevant UI spec and user story references.
+6. **Update session memory** with key decisions, contract agreements, or blockers encountered during coordination.
+7. Verify that the returned outputs are consistent with each other and with the documented contracts.
+8. Trigger corrective re-delegation if outputs are incomplete or misaligned.
+9. Finish when backend and frontend work together to fulfill the acceptance criteria, or stop if a blocker prevents valid progress.
 
 ## Output
 

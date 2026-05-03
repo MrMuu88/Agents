@@ -35,11 +35,13 @@ tools: ['search', 'read', 'edit', 'execute', 'browser', 'web', 'vscode/askQuesti
 
 ## Workflow
 
-1. Read the user story, UI specification, and relevant architecture documentation before writing any code.
-2. Use Explore if existing component patterns or similar screens already exist in the project.
-3. Implement or update components, hooks, and routing in the correct `src/` folders.
-4. Connect to the backend using the documented IPC channel names and payload shapes.
-5. Verify the output matches the UI specification and fulfills the user story acceptance criteria.
+1. **Check session memory** at the start to review IPC contracts, API shapes, or component patterns from prior work on this feature.
+2. Read the user story, UI specification, and relevant architecture documentation before writing any code.
+3. Use Explore if existing component patterns or similar screens already exist in the project.
+4. Implement or update components, hooks, and routing in the correct `src/` folders.
+5. Connect to the backend using the documented IPC channel names and payload shapes from session memory or contracts.
+6. **Update session memory** with any discovered component patterns or integration adjustments for team reference.
+7. Verify the output matches the UI specification and fulfills the user story acceptance criteria.
 
 ## Output
 

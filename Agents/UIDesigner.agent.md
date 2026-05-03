@@ -44,17 +44,19 @@ handoffs:
 
 ## Workflow
 
-1. **If the screen or flow purpose, primary user action, or user role is unclear, invoke the askQuestions tool** with:
+1. **Check session memory** at the start for any prior design decisions, feature context, or design system choices.
+2. **If the screen or flow purpose, primary user action, or user role is unclear, invoke the askQuestions tool** with:
    - **Screen purpose**: What is the primary user goal on this screen?
    - **User role**: Who is using this screen and in what context?
    - **Key interactions**: What are the critical user actions?
    - **Related screens**: How does this connect to other screens in the flow?
-2. Use Explore to review related screens, features, or PRD context if needed.
-3. Define the information hierarchy and layout blocks.
-4. Select the design system direction (Anthracite Modern or Green/White Clean) from the `ui-design` skill.
-5. Define components, states, and interaction behavior.
-6. Produce the `.md` specification and `.html` prototype in the correct folder using the correct naming pattern.
-7. Update the central UI summary document to reference the new screen.
+3. Use Explore to review related screens, features, or PRD context if needed.
+4. Define the information hierarchy and layout blocks.
+5. Select the design system direction (Anthracite Modern or Green/White Clean) from the `ui-design` skill.
+6. Define components, states, and interaction behavior.
+7. Produce the `.md` specification and `.html` prototype in the correct folder using the correct naming pattern.
+8. **Update session memory** with UI file paths, design tokens used, and component interaction patterns for developer reference.
+9. Update the central UI summary document to reference the new screen.
 
 ## Output
 

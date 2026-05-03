@@ -48,17 +48,19 @@ handoffs:
 
 ## Workflow
 
-1. Read the request and identify the architectural decision, constraint, or gap to resolve.
-2. Use Explore if the current codebase, documentation, or system shape must be understood first.
-3. **If the request lacks clarity on scope, non-functional requirements, or system constraints, invoke the askQuestions tool** with:
+1. **Check session memory** at the start for prior architectural decisions, system constraints, or data model choices.
+2. Read the request and identify the architectural decision, constraint, or gap to resolve.
+3. Use Explore if the current codebase, documentation, or system shape must be understood first.
+4. **If the request lacks clarity on scope, non-functional requirements, or system constraints, invoke the askQuestions tool** with:
    - **Integration points**: What systems must this integrate with?
    - **Non-functional requirements**: What are the performance, scale, security, or availability needs?
    - **Existing patterns**: Should this follow an established pattern in the codebase?
    - **Key trade-offs**: What matters most—speed, cost, maintainability, scalability?
-4. Define or refine the architecture, including system boundaries, data shape, and cross-cutting concerns as needed.
-5. Update the relevant architecture artifacts, diagrams, and decision notes in the correct format.
-6. Review the result for consistency with product, UI, and implementation-facing documents.
-7. Hand off to Plan or implementation when the architecture is clear enough to execute.
+5. Define or refine the architecture, including system boundaries, data shape, and cross-cutting concerns as needed.
+6. Update the relevant architecture artifacts, diagrams, and decision notes in the correct format.
+7. **Store architectural decisions, data model changes, and API/IPC contracts in session memory** for downstream teams.
+8. Review the result for consistency with product, UI, and implementation-facing documents.
+9. Hand off to Plan or implementation when the architecture is clear enough to execute.
 
 ## Output
 
