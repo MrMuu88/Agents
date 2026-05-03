@@ -7,7 +7,7 @@
 ## 1. Core Philosophy
 
 - **Dark, premium canvas.** The interface uses sophisticated dark grays that convey technology and refinement.
-- **Cool green as precision.** A bright, crisp green accent signals accuracy, success, and technological prowess.
+- **Cool purple as precision.** A bright, crisp purple accent signals confidence, clarity, and technological prowess.
 - **Depth through subtle contrast.** Layered surface values create hierarchy without visual noise.
 - **Geometric precision.** Clean angles, consistent spacing, and mathematical rigor define the aesthetic.
 - **Performance-first interaction.** Micro-interactions feel snappy and responsive, never sluggish.
@@ -20,43 +20,43 @@
 
 | Token                  | Value        | Usage                                            |
 |------------------------|--------------|--------------------------------------------------|
-| `--bg-base`            | `#111315`    | Deepest layer — main app background              |
-| `--bg-secondary`       | `#15181B`    | Page section backgrounds, alternate              |
-| `--bg-surface`         | `#1B1F24`    | Card surfaces, elevated panels                   |
-| `--bg-surface-alt`     | `#232831`    | Alternative surface for secondary content        |
+| `--bg-base`            | `rgba(17,19,21,1)`    | Deepest layer — main app background              |
+| `--bg-secondary`       | `rgba(21,24,27,1)`    | Page section backgrounds, alternate              |
+| `--bg-surface`         | `rgba(27,31,36,1)`    | Card surfaces, elevated panels                   |
+| `--bg-surface-alt`     | `rgba(35,40,49,1)`    | Alternative surface for secondary content        |
 | `--bg-overlay`         | `rgba(17,19,21,0.80)` | Modal backdrop, overlays            |
 
-### 2.2 Green Accent Palette
+### 2.2 Purple Accent Palette
 
-A cool, bright green signals success, primary actions, and active states. Precise and technological.
+A cool, bright purple signals focus, primary actions, and active states. Precise and technological.
 
-| Token              | Value     | Hue Name         |
-|--------------------|-----------|------------------|
-| `--green-primary`  | `#2BD97F` | Core brand green |
-| `--green-light`    | `#5DE99F` | Light green highlight |
-| `--green-dark`     | `#1E9D5C` | Dark green for inactive |
-| `--green-muted`    | `rgba(43,217,127,0.20)` | Soft green background |
+| Token               | Value     | Hue Name             |
+|---------------------|-----------|----------------------|
+| `--purple-primary`  | `rgba(139,92,246,1)` | Core brand purple |
+| `--purple-light`    | `rgba(167,139,250,1)` | Light purple highlight |
+| `--purple-dark`     | `rgba(109,40,217,1)` | Dark purple for inactive |
+| `--purple-muted`    | `rgba(139,92,246,0.20)` | Soft purple background |
 
 ### 2.3 Semantic / Functional Colors
 
 | Token               | Value       | Usage                         |
 |---------------------|-------------|-------------------------------|
-| `--text-primary`    | `#F5F7FA`   | Headings, key labels, body text |
-| `--text-secondary`  | `#A9B2BF`   | Meta, descriptions            |
-| `--text-muted`      | `#6B7684`   | Placeholders, disabled text   |
-| `--text-inverse`    | `#111315`   | Text on colored backgrounds   |
-| `--border-subtle`   | `#2C3440`   | Default borders, dividers     |
-| `--border-active`   | `#2BD97F`   | Focused / active borders      |
-| `--accent-primary`  | `#2BD97F`   | Primary CTA, links, active nav|
-| `--accent-muted`    | `rgba(43,217,127,0.20)` | Soft accent backgrounds |
-| `--danger`          | `#FF5D6C`   | Errors, destructive actions   |
-| `--warning`         | `#FFB84D`   | Warnings, caution             |
-| `--success`         | `#2BD97F`   | Success, confirmations        |
-| `--info`            | `#4B9FFF`   | Informational, secondary CTA  |
+| `--text-primary`    | `rgba(245,247,250,1)`   | Headings, key labels, body text |
+| `--text-secondary`  | `rgba(169,178,191,1)`   | Meta, descriptions            |
+| `--text-muted`      | `rgba(107,118,132,1)`   | Placeholders, disabled text   |
+| `--text-inverse`    | `rgba(17,19,21,1)`   | Text on colored backgrounds   |
+| `--border-subtle`   | `rgba(44,52,64,1)`   | Default borders, dividers     |
+| `--border-active`   | `rgba(139,92,246,1)`   | Focused / active borders      |
+| `--accent-primary`  | `rgba(139,92,246,1)`   | Primary CTA, links, active nav|
+| `--accent-muted`    | `rgba(139,92,246,0.20)` | Soft accent backgrounds |
+| `--danger`          | `rgba(255,93,108,1)`   | Errors, destructive actions   |
+| `--warning`         | `rgba(255,184,77,1)`   | Warnings, caution             |
+| `--success`         | `rgba(139,92,246,1)`   | Success, confirmations        |
+| `--info`            | `rgba(75,159,255,1)`   | Informational, secondary CTA  |
 
 ### 2.4 Color Usage Rules
 
-- Green is used consistently for all positive, primary, and affirmative states.
+- Purple is used consistently for all primary and active states.
 - Red is reserved for errors, deletions, and destructive actions only.
 - Backgrounds should remain in the dark gray range — never introduce warm or pastel tones.
 - All color combinations must meet WCAG AA (4.5:1) contrast minimum.
@@ -159,8 +159,8 @@ Anthracite Modern uses **restrained, single-layer shadows** to define depth with
 ```css
 /* Example: Raised card */
 .card {
-  background: #1B1F24;
-  border: 1px solid #2C3440;
+  background: rgba(27,31,36,1);
+  border: 1px solid rgba(44,52,64,1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.40);
   border-radius: var(--radius-lg);
 }
@@ -208,12 +208,12 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 - Decorative icons may use `--accent-muted` as background tint.
 
 ```css
-/* Active icon with green */
+/* Active icon with purple */
 .icon-active {
   color: var(--accent-primary);
 }
 
-/* Icon with muted green background */
+/* Icon with muted purple background */
 .icon-decorative {
   color: var(--accent-primary);
   background: var(--accent-muted);
@@ -241,10 +241,10 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 
 | Variant    | Background       | Text             | Border                    | Shadow        |
 |------------|------------------|------------------|---------------------------|---------------|
-| Primary    | `--accent-primary` | `#111315`        | none                      | Subtle (5.1) |
-| Secondary  | `#232831`        | `--text-primary` | `1px solid --border-subtle` | None         |
+| Primary    | `--accent-primary` | `rgba(17,19,21,1)`        | none                      | Subtle (5.1) |
+| Secondary  | `rgba(35,40,49,1)`        | `--text-primary` | `1px solid --border-subtle` | None         |
 | Ghost      | transparent      | `--accent-primary` | `1px solid --accent-primary` | None        |
-| Danger     | `rgba(255,93,108,0.15)` | `#FF5D6C` | `1px solid rgba(255,93,108,0.40)` | None    |
+| Danger     | `rgba(255,93,108,0.15)` | `rgba(255,93,108,1)` | `1px solid rgba(255,93,108,0.40)` | None    |
 
 - Height: 36 px (compact) / 40 px (standard) / 48 px (large).
 - Padding: `--sp-4` horizontal (16 px), `--sp-2` vertical (8 px) for standard.
@@ -253,9 +253,9 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 
 ### 7.2 Inputs & Forms
 
-- Background: `#232831`, border `--border-subtle`.
+- Background: `rgba(35,40,49,1)`, border `--border-subtle`.
 - Focus: border becomes `--border-active`, subtle glow shadow added.
-- Error: border `#FF5D6C`, background tint `rgba(255,93,108,0.10)`.
+- Error: border `rgba(255,93,108,1)`, background tint `rgba(255,93,108,0.10)`.
 - Height: 40 px standard, 36 px compact.
 - Label: `--type-label` above input, `--text-secondary` color.
 - Helper/error text: `--type-caption` below input in corresponding color.
@@ -264,19 +264,19 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 ```css
 input:focus {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(43, 217, 127, 0.15);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
   outline: none;
 }
 
 input:invalid {
-  border-color: #FF5D6C;
+  border-color: rgba(255,93,108,1);
   box-shadow: 0 0 0 3px rgba(255, 93, 108, 0.15);
 }
 ```
 
 ### 7.3 Cards
 
-- Background: `#1B1F24` with `--border-subtle` border.
+- Background: `rgba(27,31,36,1)` with `--border-subtle` border.
 - Shadow: Raised level (see §5.1).
 - Padding: `--sp-6` (24 px) all sides.
 - Content hierarchy: Section label → Title → Body → Actions.
@@ -284,8 +284,8 @@ input:invalid {
 
 ### 7.4 Navigation (Sidebar / Top Bar)
 
-- Background: `#15181B` with subtle border-bottom `--border-subtle`.
-- Active item: `--accent-primary` text + icon, left border accent 2px `--accent-primary`, subtle background `rgba(43,217,127,0.08)`.
+- Background: `rgba(21,24,27,1)` with subtle border-bottom `--border-subtle`.
+- Active item: `--accent-primary` text + icon, left border accent 2px `--accent-primary`, subtle background `rgba(139,92,246,0.08)`.
 - Inactive item: `--text-secondary`, no border or background.
 - Hover: text becomes `--text-primary`, transition 150ms ease-in-out.
 - Spacing: `--sp-4` (16 px) padding per item, `--sp-1` (4 px) gap.
@@ -294,11 +294,11 @@ input:invalid {
 
 | Semantic | Background               | Text         |
 |----------|--------------------------|--------------|
-| Success  | `rgba(43,217,127,0.20)`  | `#2BD97F`    |
-| Warning  | `rgba(255,184,77,0.20)`  | `#FFB84D`    |
-| Danger   | `rgba(255,93,108,0.20)`  | `#FF5D6C`    |
-| Info     | `rgba(75,159,255,0.20)`  | `#4B9FFF`    |
-| Neutral  | `#2C3440`                | `--text-secondary` |
+| Success  | `rgba(139,92,246,0.20)`  | `rgba(139,92,246,1)`    |
+| Warning  | `rgba(255,184,77,0.20)`  | `rgba(255,184,77,1)`    |
+| Danger   | `rgba(255,93,108,0.20)`  | `rgba(255,93,108,1)`    |
+| Info     | `rgba(75,159,255,0.20)`  | `rgba(75,159,255,1)`    |
+| Neutral  | `rgba(44,52,64,1)`                | `--text-secondary` |
 
 - Border radius: `--radius-full` (pill).
 - Padding: `6px 12px`.
@@ -341,7 +341,7 @@ input:invalid {
 | Anti-pattern                            | Reason                                          |
 |-----------------------------------------|-------------------------------------------------|
 | Light backgrounds on main canvas        | Breaks the dark, sophisticated aesthetic        |
-| Warm colors mixed with cool green       | Creates visual discord                          |
+| Warm colors mixed with cool purple      | Creates visual discord                          |
 | Multiple accent colors per screen       | Creates confusion in a precision-focused style  |
 | Shadows stronger than Float level       | Creates excessive visual noise                  |
 | Animations longer than 300 ms           | Feels sluggish in a snappy, tech-focused UI     |

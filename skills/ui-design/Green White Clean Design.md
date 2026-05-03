@@ -20,10 +20,10 @@
 
 | Token                  | Value        | Usage                                            |
 |------------------------|--------------|--------------------------------------------------|
-| `--bg-base`            | `#F7FAF8`    | Main app background (very light warm gray)       |
-| `--bg-secondary`       | `#F1F7F2`    | Page section backgrounds, subtle shift           |
-| `--bg-surface`         | `#FFFFFF`    | Card surfaces, elevated panels                   |
-| `--bg-surface-alt`     | `#EEF4EF`    | Alternative surface for secondary content        |
+| `--bg-base`            | `rgba(247,250,248,1)`    | Main app background (very light warm gray)       |
+| `--bg-secondary`       | `rgba(241,247,242,1)`    | Page section backgrounds, subtle shift           |
+| `--bg-surface`         | `rgba(255,255,255,1)`    | Card surfaces, elevated panels                   |
+| `--bg-surface-alt`     | `rgba(238,244,239,1)`    | Alternative surface for secondary content        |
 | `--bg-overlay`         | `rgba(16,20,24,0.56)` | Modal backdrop, overlays            |
 
 ### 2.2 Green Accent Palette
@@ -32,27 +32,27 @@ Green is the semantic accent — used for success, primary actions, and positive
 
 | Token              | Value     | Hue Name         |
 |--------------------|-----------|------------------|
-| `--green-primary`  | `#16A34A` | Core brand green |
-| `--green-light`    | `#DCFCE7` | Light green background |
-| `--green-dark`     | `#15803D` | Dark green for hover/active |
-| `--green-muted`    | `#86EFAC` | Softer green accent |
+| `--green-primary`  | `rgba(22,163,74,1)` | Core brand green |
+| `--green-light`    | `rgba(220,252,231,1)` | Light green background |
+| `--green-dark`     | `rgba(21,128,61,1)` | Dark green for hover/active |
+| `--green-muted`    | `rgba(134,239,172,1)` | Softer green accent |
 
 ### 2.3 Semantic / Functional Colors
 
 | Token               | Value       | Usage                         |
 |---------------------|-------------|-------------------------------|
-| `--text-primary`    | `#101418`   | Headings, key labels, body text |
-| `--text-secondary`  | `#4B5563`   | Meta, descriptions            |
-| `--text-muted`      | `#9CA3AF`   | Placeholders, disabled text   |
-| `--text-inverse`    | `#FFFFFF`   | Text on colored backgrounds   |
-| `--border-subtle`   | `#D7E3DA`   | Default borders, dividers     |
-| `--border-active`   | `#16A34A`   | Focused / active borders      |
-| `--accent-primary`  | `#16A34A`   | Primary CTA, links, active nav|
-| `--accent-soft`     | `#DCFCE7`   | Light backgrounds for accents |
-| `--danger`          | `#DC2626`   | Errors, destructive actions   |
-| `--warning`         | `#F59E0B`   | Warnings, caution             |
-| `--success`         | `#10B981`   | Success, confirmations        |
-| `--info`            | `#3B82F6`   | Informational, secondary CTA  |
+| `--text-primary`    | `rgba(16,20,24,1)`   | Headings, key labels, body text |
+| `--text-secondary`  | `rgba(75,85,99,1)`   | Meta, descriptions            |
+| `--text-muted`      | `rgba(156,163,175,1)`   | Placeholders, disabled text   |
+| `--text-inverse`    | `rgba(255,255,255,1)`   | Text on colored backgrounds   |
+| `--border-subtle`   | `rgba(215,227,218,1)`   | Default borders, dividers     |
+| `--border-active`   | `rgba(22,163,74,1)`   | Focused / active borders      |
+| `--accent-primary`  | `rgba(22,163,74,1)`   | Primary CTA, links, active nav|
+| `--accent-soft`     | `rgba(220,252,231,1)`   | Light backgrounds for accents |
+| `--danger`          | `rgba(220,38,38,1)`   | Errors, destructive actions   |
+| `--warning`         | `rgba(245,158,11,1)`   | Warnings, caution             |
+| `--success`         | `rgba(16,185,129,1)`   | Success, confirmations        |
+| `--info`            | `rgba(59,130,246,1)`   | Informational, secondary CTA  |
 
 ### 2.4 Color Usage Rules
 
@@ -159,8 +159,8 @@ Green/White Clean uses **light, consistent shadows** to define depth and hierarc
 ```css
 /* Example: Raised card */
 .card {
-  background: #FFFFFF;
-  border: 1px solid #D7E3DA;
+  background: rgba(255,255,255,1);
+  border: 1px solid rgba(215,227,218,1);
   box-shadow: 0 4px 6px rgba(16, 20, 24, 0.08), 0 1px 3px rgba(16, 20, 24, 0.04);
   border-radius: var(--radius-lg);
 }
@@ -241,10 +241,10 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 
 | Variant    | Background       | Text             | Border                    | Shadow        |
 |------------|------------------|------------------|---------------------------|---------------|
-| Primary    | `--accent-primary` | `#FFFFFF`        | none                      | Subtle (7.1) |
-| Secondary  | `#EEF4EF`        | `--accent-primary` | `1px solid --border-subtle` | None         |
+| Primary    | `--accent-primary` | `rgba(255,255,255,1)`        | none                      | Subtle (7.1) |
+| Secondary  | `rgba(238,244,239,1)`        | `--accent-primary` | `1px solid --border-subtle` | None         |
 | Ghost      | transparent      | `--accent-primary` | `1px solid --accent-primary` | None        |
-| Danger     | `#FEE2E2`        | `#DC2626`        | `1px solid #FECACA`       | None         |
+| Danger     | `rgba(254,226,226,1)`        | `rgba(220,38,38,1)`        | `1px solid rgba(254,202,202,1)`       | None         |
 
 - Height: 36 px (compact) / 40 px (standard) / 48 px (large).
 - Padding: `--sp-4` horizontal (16 px), `--sp-2` vertical (8 px) for standard.
@@ -253,9 +253,9 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 
 ### 7.2 Inputs & Forms
 
-- Background: `#FFFFFF`, border `--border-subtle`.
+- Background: `rgba(255,255,255,1)`, border `--border-subtle`.
 - Focus: border becomes `--border-active` (2px), box-shadow adds subtle green glow.
-- Error: border `#DC2626`, background tint `#FEE2E2`.
+- Error: border `rgba(220,38,38,1)`, background tint `rgba(254,226,226,1)`.
 - Height: 40 px standard, 36 px compact.
 - Label: `--type-label` above input, `--text-secondary` color.
 - Helper/error text: `--type-caption` below input in corresponding color.
@@ -269,14 +269,14 @@ input:focus {
 }
 
 input:invalid {
-  border-color: #DC2626;
+  border-color: rgba(220,38,38,1);
   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.10);
 }
 ```
 
 ### 7.3 Cards
 
-- Background: `#FFFFFF` with `--border-subtle` border.
+- Background: `rgba(255,255,255,1)` with `--border-subtle` border.
 - Shadow: Raised level (see §5.1).
 - Padding: `--sp-6` (24 px) all sides.
 - Content hierarchy: Section label → Title → Body → Actions.
@@ -284,7 +284,7 @@ input:invalid {
 
 ### 7.4 Navigation (Sidebar / Top Bar)
 
-- Background: `#FFFFFF` with subtle border-bottom `--border-subtle`.
+- Background: `rgba(255,255,255,1)` with subtle border-bottom `--border-subtle`.
 - Active item: `--accent-primary` text + icon, no underline, left border accent 3px `--accent-primary`.
 - Inactive item: `--text-secondary`, no border.
 - Hover: background becomes `--bg-secondary`, transition 150ms.
@@ -294,11 +294,11 @@ input:invalid {
 
 | Semantic | Background       | Text         |
 |----------|------------------|--------------|
-| Success  | `#DCFCE7`        | `#15803D`    |
-| Warning  | `#FEF3C7`        | `#B45309`    |
-| Danger   | `#FEE2E2`        | `#DC2626`    |
-| Info     | `#DBEAFE`        | `#1E40AF`    |
-| Neutral  | `#F3F4F6`        | `--text-secondary` |
+| Success  | `rgba(220,252,231,1)`        | `rgba(21,128,61,1)`    |
+| Warning  | `rgba(254,243,199,1)`        | `rgba(180,83,9,1)`    |
+| Danger   | `rgba(254,226,226,1)`        | `rgba(220,38,38,1)`    |
+| Info     | `rgba(219,234,254,1)`        | `rgba(30,64,175,1)`    |
+| Neutral  | `rgba(243,244,246,1)`        | `--text-secondary` |
 
 - Border radius: `--radius-full` (pill).
 - Padding: `6px 12px`.

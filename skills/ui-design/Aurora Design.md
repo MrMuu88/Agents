@@ -20,8 +20,8 @@
 
 | Token                  | Value        | Usage                                            |
 |------------------------|--------------|--------------------------------------------------|
-| `--bg-base`            | `#080C14`    | Deepest layer — main app background              |
-| `--bg-mid`             | `#0D1220`    | Secondary pages, panels                          |
+| `--bg-base`            | `rgba(8,12,20,1)`    | Deepest layer — main app background              |
+| `--bg-mid`             | `rgba(13,18,32,1)`    | Secondary pages, panels                          |
 | `--bg-surface`         | `rgba(255,255,255,0.05)` | Glass card base (frosted surface)   |
 | `--bg-surface-hover`   | `rgba(255,255,255,0.08)` | Hovered glass surface                |
 | `--bg-overlay`         | `rgba(8,12,20,0.72)`     | Modals, drawers backdrop             |
@@ -32,36 +32,36 @@ Aurora accent colors are used for ambient gradients, glows, and highlights. **Ne
 
 | Token              | Value     | Hue Name         |
 |--------------------|-----------|------------------|
-| `--aurora-teal`    | `#00E8C8` | Arctic Teal      |
-| `--aurora-green`   | `#3DFF9A` | Boreal Green     |
-| `--aurora-blue`    | `#4B9FFF` | Polar Blue       |
-| `--aurora-violet`  | `#8B5CF6` | Deep Violet      |
-| `--aurora-magenta` | `#E040FB` | Solar Magenta    |
-| `--aurora-warm`    | `#FFB86A` | Twilight Amber   |
+| `--aurora-teal`    | `rgba(0,232,200,1)` | Arctic Teal      |
+| `--aurora-green`   | `rgba(61,255,154,1)` | Boreal Green     |
+| `--aurora-blue`    | `rgba(75,159,255,1)` | Polar Blue       |
+| `--aurora-violet`  | `rgba(139,92,246,1)` | Deep Violet      |
+| `--aurora-magenta` | `rgba(224,64,251,1)` | Solar Magenta    |
+| `--aurora-warm`    | `rgba(255,184,106,1)` | Twilight Amber   |
 
 #### Ambient Background Gradient (reference)
 ```css
 background: radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0,232,200,0.12) 0%, transparent 60%),
             radial-gradient(ellipse 60% 50% at 80% 70%, rgba(139,92,246,0.14) 0%, transparent 60%),
             radial-gradient(ellipse 50% 40% at 50% 100%, rgba(75,159,255,0.10) 0%, transparent 55%),
-            #080C14;
+            rgba(8,12,20,1);
 ```
 
 ### 2.3 Semantic / Functional Colors
 
 | Token               | Value       | Usage                         |
 |---------------------|-------------|-------------------------------|
-| `--text-primary`    | `#EDF2FF`   | Headings, key labels          |
-| `--text-secondary`  | `#8B9BBB`   | Meta, descriptions            |
-| `--text-muted`      | `#4A5670`   | Placeholders, disabled text   |
-| `--text-inverse`    | `#080C14`   | Text on light/glow surfaces   |
+| `--text-primary`    | `rgba(237,242,255,1)`   | Headings, key labels          |
+| `--text-secondary`  | `rgba(139,155,187,1)`   | Meta, descriptions            |
+| `--text-muted`      | `rgba(74,86,112,1)`   | Placeholders, disabled text   |
+| `--text-inverse`    | `rgba(8,12,20,1)`   | Text on light/glow surfaces   |
 | `--border-subtle`   | `rgba(255,255,255,0.08)` | Card and panel borders |
 | `--border-active`   | `rgba(0,232,200,0.40)`   | Focused / active borders |
-| `--accent-primary`  | `#00E8C8`   | Primary CTA, links, active nav|
+| `--accent-primary`  | `rgba(0,232,200,1)`   | Primary CTA, links, active nav|
 | `--accent-glow`     | `rgba(0,232,200,0.25)`   | Glow halo behind CTAs  |
-| `--danger`          | `#FF5370`   | Errors, destructive actions   |
-| `--warning`         | `#FFB86A`   | Warnings                      |
-| `--success`         | `#3DFF9A`   | Confirmations, success badges |
+| `--danger`          | `rgba(255,83,112,1)`   | Errors, destructive actions   |
+| `--warning`         | `rgba(255,184,106,1)`   | Warnings                      |
+| `--success`         | `rgba(61,255,154,1)`   | Confirmations, success badges |
 
 ### 2.4 Color Usage Rules
 
@@ -105,7 +105,7 @@ Inter is the baseline. Manrope may be used for display headings only if a softer
 - Headings are always `--text-primary`. Never apply aurora gradient directly to body text.
 - **Gradient text** is allowed **only** on Display headings (max 1 per screen) using `background-clip: text`.
   ```css
-  background: linear-gradient(90deg, #00E8C8 0%, #8B5CF6 100%);
+  background: linear-gradient(90deg, rgba(0,232,200,1) 0%, rgba(139,92,246,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   ```
@@ -250,10 +250,10 @@ Rationale: Both libraries offer consistent stroke weight, clean geometry, and ex
 
 | Variant    | Background                              | Text             | Border                          | Glow              |
 |------------|-----------------------------------------|------------------|---------------------------------|-------------------|
-| Primary    | `linear-gradient(135deg, #00E8C8, #4B9FFF)` | `#080C14`   | none                            | Yes (see §5.2)    |
+| Primary    | `linear-gradient(135deg, rgba(0,232,200,1), rgba(75,159,255,1))` | `rgba(8,12,20,1)`   | none                            | Yes (see §5.2)    |
 | Secondary  | `rgba(255,255,255,0.07)`                | `--text-primary` | `1px solid rgba(255,255,255,0.13)` | No             |
 | Ghost      | transparent                             | `--accent-primary` | `1px solid --accent-primary`  | No                |
-| Danger     | `rgba(255,83,112,0.15)`                 | `#FF5370`        | `1px solid rgba(255,83,112,0.40)` | No              |
+| Danger     | `rgba(255,83,112,0.15)`                 | `rgba(255,83,112,1)`        | `1px solid rgba(255,83,112,0.40)` | No              |
 
 - Height: 36 px (compact) / 40 px (standard) / 48 px (large).
 - Padding: `--sp-4` horizontal (16 px), `--sp-2` vertical (8 px) for standard.
@@ -289,10 +289,10 @@ Rationale: Both libraries offer consistent stroke weight, clean geometry, and ex
 
 | Semantic | Background               | Text         |
 |----------|--------------------------|--------------|
-| Success  | `rgba(61,255,154,0.15)`  | `#3DFF9A`    |
-| Warning  | `rgba(255,184,106,0.15)` | `#FFB86A`    |
-| Danger   | `rgba(255,83,112,0.15)`  | `#FF5370`    |
-| Info     | `rgba(75,159,255,0.15)`  | `#4B9FFF`    |
+| Success  | `rgba(61,255,154,0.15)`  | `rgba(61,255,154,1)`    |
+| Warning  | `rgba(255,184,106,0.15)` | `rgba(255,184,106,1)`    |
+| Danger   | `rgba(255,83,112,0.15)`  | `rgba(255,83,112,1)`    |
+| Info     | `rgba(75,159,255,0.15)`  | `rgba(75,159,255,1)`    |
 | Neutral  | `rgba(255,255,255,0.08)` | `--text-secondary` |
 
 - Border radius: `--radius-full` (pill).
