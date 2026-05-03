@@ -53,6 +53,8 @@ tools: ['search', 'read', 'edit', 'execute', 'web', 'vscode/askQuestions', 'vsco
 - Migrations are generated, reviewed, and applied before committing.
 - No credentials or secrets in code; configuration uses options patterns.
 
+# Stack Guidelines
+
 ## .Net Api project structure
 - `Program.cs`: main entry point, minimal API endpoint definitions, dependency injection.
 - `Services/`: application services implementing business logic and use cases.

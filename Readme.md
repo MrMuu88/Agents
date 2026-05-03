@@ -348,4 +348,4 @@ To improve this repository:
 
 - LLM wiki building should be introduced into the whole thing, right now it's a RAG system, every agent reviews the required documentation on every request.
 
-- the LEad developer agent should query the wiki, and complie all the necessaray knowledge pieces, befor starting implementation. this way his sub agents, should have all the information neede to their work.
+- the Lead developer agent should query the wiki, and complie all the necessaray knowledge pieces, befor starting implementation. this way his sub agents, should have all the information neede to their work.

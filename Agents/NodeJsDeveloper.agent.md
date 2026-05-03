@@ -56,6 +56,8 @@ tools: ['search', 'read', 'edit', 'execute', 'browser', 'web', 'vscode/askQuesti
 - TypeScript types are defined for all IPC payloads and data models.
 - No blocking calls in the main process.
 
+# Stack Guidelines
+
 ### Electron Project Structure
 - `main/`: Contains the Electron main process code (`main.js` or `main.ts`). This is the backend of the desktop app.
 - `preload/`: Contains preload scripts that securely expose Node.js APIs to the renderer process via `contextBridge`.

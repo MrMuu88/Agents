@@ -55,6 +55,8 @@ tools: ['search', 'read', 'edit', 'execute', 'browser', 'web', 'vscode/askQuesti
 - Styles use the `styles` object pattern; no inline complex style objects.
 - Loading, empty, error, and success states are implemented for all data views.
 
+# Stack Guidelines
+
 ## React Project Structure
 - `src/`
 	- `components/`: reusable UI components, organized by feature or domain.
