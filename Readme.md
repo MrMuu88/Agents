@@ -338,14 +338,6 @@ To improve this repository:
 # TODO
 - The Planing Agnest should ask questions. right now they have thew asq tool, but it is not used. I think it's because it is not configured
 
-- the system specific sections in the develeoper agents should be configured differently. I need to work on this
-
-- UI designs should be reworked a bit, to be more distinctive
-   - Antracite is totaly off, the whole design has to be redone from scratch
-   - Aurora need soem furter definition
-   - green white as well
-   - I belive I need a fourth style to have 2 dark, and 2 light themed styles
-
 - LLM wiki building should be introduced into the whole thing, right now it's a RAG system, every agent reviews the required documentation on every request.
 
 - the Lead developer agent should query the wiki, and complie all the necessaray knowledge pieces, befor starting implementation. this way his sub agents, should have all the information neede to their work.

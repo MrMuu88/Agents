@@ -44,7 +44,11 @@ handoffs:
 
 ## Workflow
 
-1. Clarify the screen or flow purpose, primary user action, and user role if unclear.
+1. **If the screen or flow purpose, primary user action, or user role is unclear, invoke the askQuestions tool** with:
+   - **Screen purpose**: What is the primary user goal on this screen?
+   - **User role**: Who is using this screen and in what context?
+   - **Key interactions**: What are the critical user actions?
+   - **Related screens**: How does this connect to other screens in the flow?
 2. Use Explore to review related screens, features, or PRD context if needed.
 3. Define the information hierarchy and layout blocks.
 4. Select the design system direction (Anthracite Modern or Green/White Clean) from the `ui-design` skill.

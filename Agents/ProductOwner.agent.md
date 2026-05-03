@@ -46,7 +46,11 @@ handoffs:
 
 1. Read the request and identify the product problem, goal, or backlog need.
 2. Use Explore if existing documentation, features, or related implementation context must be checked.
-3. Clarify missing scope, user value, or acceptance criteria with targeted questions.
+3. **If the request lacks clarity on scope, user value, or success criteria, invoke the askQuestions tool** with:
+   - **Feature scope**: What are the boundaries and key user interactions?
+   - **User value**: What problem does this solve and for whom?
+   - **Acceptance criteria**: What defines "done" and how will success be measured?
+   - **Dependencies**: Does this depend on other features or architecture?
 4. Create or refine the feature and user story artifacts in the correct location and format.
 5. Review identifiers, links, and wording for consistency and traceability.
 6. Hand off to Plan or implementation when the product definition is complete enough.
