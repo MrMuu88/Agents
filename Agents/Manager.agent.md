@@ -28,6 +28,7 @@ handoffs:
 
 ## Skills
 
+- Use the `high-level-planning` skill when the user requests PRD-based planning or a full documentation set from a requirements document.
 - Use ProductOwner for feature and user story definition.
 - Use UIDesigner for UI screens, flows, and prototypes.
 - Use Architect for high-level architecture and data model work.
