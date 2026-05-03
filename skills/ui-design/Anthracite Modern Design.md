@@ -9,7 +9,7 @@
 - **Dark, premium canvas.** The interface uses sophisticated dark grays that convey technology and refinement.
 - **Cool purple as precision.** A bright, crisp purple accent signals confidence, clarity, and technological prowess.
 - **Depth through subtle contrast.** Layered surface values create hierarchy without visual noise.
-- **Geometric precision.** Clean angles, consistent spacing, and mathematical rigor define the aesthetic.
+- **Hard geometric precision.** Minimal, sharp corners and edges convey technical rigor and professional confidence.
 - **Performance-first interaction.** Micro-interactions feel snappy and responsive, never sluggish.
 
 ---
@@ -134,10 +134,10 @@ Based on a **4 px grid**. All layout spacing, padding, margin, and gap values mu
 
 | Token          | Value  | Use                                    |
 |----------------|--------|----------------------------------------|
-| `--radius-sm`  | 6 px   | Chips, badges, small inputs            |
-| `--radius-md`  | 10 px  | Buttons, standard inputs               |
-| `--radius-lg`  | 14 px  | Cards, panels                          |
-| `--radius-xl`  | 20 px  | Modal dialogs, floating surfaces       |
+| `--radius-sm`  | 0 px   | Chips, badges, small inputs            |
+| `--radius-md`  | 2 px   | Buttons, standard inputs               |
+| `--radius-lg`  | 4 px   | Cards, panels                          |
+| `--radius-xl`  | 6 px   | Modal dialogs, floating surfaces       |
 | `--radius-full`| 9999px | Pill buttons, avatars, progress bars   |
 
 ---
@@ -203,6 +203,7 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 
 - Use **outline** icons exclusively — no filled icons on standard UI.
 - Icon color follows text context: `--text-primary` for default, `--accent-primary` for active, `--text-muted` for disabled.
+- Keep icon usage minimal and intentional: only navigation, key actions, and status markers should carry icons.
 - Icon + label gap: `--sp-1` (4 px) for compact, `--sp-2` (8 px) for spacious layouts.
 - All icons must scale proportionally.
 - Decorative icons may use `--accent-muted` as background tint.
@@ -248,7 +249,7 @@ Rationale: Geometric, precise icons that match the technical aesthetic of Anthra
 
 - Height: 36 px (compact) / 40 px (standard) / 48 px (large).
 - Padding: `--sp-4` horizontal (16 px), `--sp-2` vertical (8 px) for standard.
-- Border radius: `--radius-md` (10 px) standard, `--radius-full` for pill style.
+- Border radius: `--radius-md` (2 px) standard; use `--radius-full` sparingly for avatars only, never for buttons.
 - Focus: `outline: 2px solid var(--accent-primary); outline-offset: 2px`.
 
 ### 7.2 Inputs & Forms
@@ -347,4 +348,4 @@ input:invalid {
 | Animations longer than 300 ms           | Feels sluggish in a snappy, tech-focused UI     |
 | Neon glow effects                       | Conflicts with the refined, restrained aesthetic |
 | Colored text (anything but links)       | Reduces contrast and sophistication             |
-| Rounded corners everywhere              | Use `--radius-md` consistently, not mixed       |
+| Rounded corners or pill shapes          | Keep corners hard and minimal (`--radius-md` at most) |

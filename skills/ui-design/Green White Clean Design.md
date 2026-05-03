@@ -7,10 +7,10 @@
 ## 1. Core Philosophy
 
 - **Light, airy canvas.** The interface lives on white or near-white backgrounds, creating openness and approachability.
-- **Green as trust.** Soft, natural greens convey healthcare, wellness, and human-centered design.
-- **Depth through elevation.** Clean shadows and subtle borders define information hierarchy rather than heavy contrast.
-- **Clarity first.** Every element has a clear purpose. Visual noise is eliminated.
-- **Accessible by nature.** High contrast, large hit targets, readable typography ensures inclusion from the ground up.
+- **Lime-tinted vibrance.** Fresh, sunny greens with yellowish undertones convey energy, optimism, and vitality.
+- **Depth through gradients.** Subtle gradient overlays and elevated surfaces create visual rhythm and movement.
+- **Bold, friendly shapes.** Generous rounded corners and spacious layouts convey warmth and accessibility.
+- **Clarity with personality.** Every element has clear purpose while maintaining a bright, energetic presence.
 
 ---
 
@@ -28,14 +28,14 @@
 
 ### 2.2 Green Accent Palette
 
-Green is the semantic accent — used for success, primary actions, and positive states.
+Lime-tinted greens signal energy, growth, and positive momentum. The palette shifts toward yellowish-green hues for a fresh, sunny character.
 
 | Token              | Value     | Hue Name         |
 |--------------------|-----------|------------------|
-| `--green-primary`  | `rgba(22,163,74,1)` | Core brand green |
-| `--green-light`    | `rgba(220,252,231,1)` | Light green background |
-| `--green-dark`     | `rgba(21,128,61,1)` | Dark green for hover/active |
-| `--green-muted`    | `rgba(134,239,172,1)` | Softer green accent |
+| `--green-primary`  | `rgba(132,204,22,1)` | Vibrant lime green |
+| `--green-light`    | `rgba(240,253,244,1)` | Light lime wash |
+| `--green-dark`     | `rgba(101,163,13,1)` | Deep lime for depth |
+| `--green-bright`   | `rgba(163,230,53,1)` | Bright sunny lime |
 
 ### 2.3 Semantic / Functional Colors
 
@@ -46,9 +46,9 @@ Green is the semantic accent — used for success, primary actions, and positive
 | `--text-muted`      | `rgba(156,163,175,1)`   | Placeholders, disabled text   |
 | `--text-inverse`    | `rgba(255,255,255,1)`   | Text on colored backgrounds   |
 | `--border-subtle`   | `rgba(215,227,218,1)`   | Default borders, dividers     |
-| `--border-active`   | `rgba(22,163,74,1)`   | Focused / active borders      |
-| `--accent-primary`  | `rgba(22,163,74,1)`   | Primary CTA, links, active nav|
-| `--accent-soft`     | `rgba(220,252,231,1)`   | Light backgrounds for accents |
+| `--border-active`   | `rgba(132,204,22,1)`   | Focused / active borders      |
+| `--accent-primary`  | `rgba(132,204,22,1)`   | Primary CTA, links, active nav|
+| `--accent-soft`     | `rgba(240,253,244,1)`   | Light backgrounds for accents |
 | `--danger`          | `rgba(220,38,38,1)`   | Errors, destructive actions   |
 | `--warning`         | `rgba(245,158,11,1)`   | Warnings, caution             |
 | `--success`         | `rgba(16,185,129,1)`   | Success, confirmations        |
@@ -134,10 +134,10 @@ Based on a **4 px grid**. All layout spacing, padding, margin, and gap values mu
 
 | Token          | Value  | Use                                    |
 |----------------|--------|----------------------------------------|
-| `--radius-sm`  | 6 px   | Chips, badges, small inputs            |
-| `--radius-md`  | 8 px   | Buttons, standard inputs               |
-| `--radius-lg`  | 12 px  | Cards, panels                          |
-| `--radius-xl`  | 16 px  | Modal dialogs, large cards             |
+| `--radius-sm`  | 12 px  | Chips, badges, small inputs            |
+| `--radius-md`  | 16 px  | Buttons, standard inputs               |
+| `--radius-lg`  | 20 px  | Cards, panels                          |
+| `--radius-xl`  | 28 px  | Modal dialogs, large cards             |
 | `--radius-full`| 9999px | Pill buttons, avatars, progress bars   |
 
 ---
@@ -166,7 +166,21 @@ Green/White Clean uses **light, consistent shadows** to define depth and hierarc
 }
 ```
 
-### 5.2 Border Usage
+### 5.2 Gradient Usage
+
+Use visible but soft gradients to avoid flat white screens and keep a sunny, energetic character.
+
+```css
+/* Sunny ambient gradient */
+background: radial-gradient(ellipse 80% 60% at 18% 10%, rgba(132,204,22,0.16) 0%, transparent 52%),
+            radial-gradient(ellipse 60% 50% at 88% 92%, rgba(250,204,21,0.10) 0%, transparent 50%),
+            rgba(247,250,248,1);
+```
+
+- Limit to 1-2 ambient gradients per screen.
+- Keep text and data surfaces on solid backgrounds for readability.
+
+### 5.3 Border Usage
 
 Light borders define surface boundaries without heaviness.
 
@@ -202,15 +216,21 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 ### 6.3 Icon Style Rules
 
 - Use **outline** icons exclusively — no filled icons on standard UI.
-- Icon color follows text context: `--text-primary` for default, `--accent-primary` for active, `--text-muted` for disabled.
+- Colored icons are encouraged to reinforce the fresh, vibrant character.
+- Use semantic icon hues: lime for primary actions, sky blue for info, amber for caution, and coral red for danger.
 - Icon + label gap: always `--sp-1` (4 px) for compact, `--sp-2` (8 px) for spacious layouts.
 - All icons must scale proportionally.
 - Decorative icons may use `--green-light` as a background tint.
 
 ```css
-/* Active icon with green */
+/* Colored icon set */
+.icon-primary { color: rgba(132,204,22,1); }
+.icon-info { color: rgba(59,130,246,1); }
+.icon-warning { color: rgba(245,158,11,1); }
+.icon-danger { color: rgba(239,68,68,1); }
+
 .icon-active {
-  color: var(--accent-primary);
+  color: rgba(132,204,22,1);
 }
 
 /* Icon with background tint */
@@ -226,12 +246,12 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 
 | Context           | Size Token   | Color                  | Style    |
 |-------------------|--------------|------------------------|----------|
-| Navigation item   | `--icon-sm`  | `--text-secondary`     | Outline  |
-| Navigation active | `--icon-sm`  | `--accent-primary`     | Outline  |
+| Navigation item   | `--icon-sm`  | `rgba(59,130,246,1)`   | Outline  |
+| Navigation active | `--icon-sm`  | `rgba(132,204,22,1)`   | Outline  |
 | Button (with text)| `--icon-sm`  | Inherits button color  | Outline  |
-| Button (icon-only)| `--icon-md`  | `--text-primary`       | Outline  |
-| Table row action  | `--icon-sm`  | `--text-secondary`     | Outline  |
-| Success state     | `--icon-md`  | `--success`            | Outline  |
+| Button (icon-only)| `--icon-md`  | `rgba(132,204,22,1)`   | Outline  |
+| Table row action  | `--icon-sm`  | `rgba(59,130,246,1)`   | Outline  |
+| Success state     | `--icon-md`  | `rgba(16,185,129,1)`   | Outline  |
 
 ---
 
@@ -248,7 +268,7 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 
 - Height: 36 px (compact) / 40 px (standard) / 48 px (large).
 - Padding: `--sp-4` horizontal (16 px), `--sp-2` vertical (8 px) for standard.
-- Border radius: `--radius-md` (8 px) standard, `--radius-full` for pill style.
+- Border radius: `--radius-md` (16 px) standard; use `--radius-full` for pill-style buttons and avatars.
 - Focus: `outline: 2px solid var(--accent-primary); outline-offset: 2px`.
 
 ### 7.2 Inputs & Forms
@@ -264,7 +284,7 @@ Rationale: Clean, friendly stroke-based icons that pair well with healthcare and
 ```css
 input:focus {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10);
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.10);
   outline: none;
 }
 
@@ -341,8 +361,8 @@ input:invalid {
 | Anti-pattern                            | Reason                                          |
 |-----------------------------------------|-------------------------------------------------|
 | Dark backgrounds on main canvas         | Breaks the light, open aesthetic                |
-| Multiple accent colors per screen       | Creates visual confusion                        |
-| Colored text (anything but links)       | Reduces contrast and accessibility              |
+| Multiple accent colors per screen       | Creates visual confusion; stick to lime-green   |
+| Minimal radii or sharp corners          | Contradicts the friendly, open aesthetic        |
 | Shadows stronger than Elevated level    | Creates artificial depth and clutter            |
 | Animations longer than 250 ms           | Feels sluggish in a clinical context            |
 | Italic text for emphasis                | Harder to read, use weight or color instead     |

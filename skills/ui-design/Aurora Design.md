@@ -218,16 +218,17 @@ Rationale: Both libraries offer consistent stroke weight, clean geometry, and ex
 ### 6.3 Icon Style Rules
 
 - Use **outline** (1.5–2 px stroke) icons exclusively — filled icons only for active/selected toggles.
-- Icon color follows text context: `--text-primary` for default, `--accent-primary` for active, `--text-muted` for disabled.
+- Icons should feel soft and calm: use a **single icon color per screen**.
+- Recommended icon color: `rgba(165,188,224,1)` for default and active states, with opacity shifts for hierarchy.
 - Icon + label gap: always `--sp-1` (4 px) or `--sp-2` (8 px) depending on size.
 - Never scale icons non-proportionally.
-- Decorative icons (empty states, illustrations) may use a gradient fill aligned to the aurora palette.
+- Avoid multicolor or gradient-filled icons; Aurora gradients belong to atmosphere layers, not icon glyphs.
 
 ```css
-/* Active icon with aurora teal */
-.icon-active {
-  color: var(--accent-primary);
-  filter: drop-shadow(0 0 4px rgba(0,232,200,0.50));
+/* Soft single-color icon */
+.icon-soft {
+  color: rgba(165,188,224,1);
+  opacity: 0.9;
 }
 ```
 
@@ -236,11 +237,11 @@ Rationale: Both libraries offer consistent stroke weight, clean geometry, and ex
 | Context           | Size Token   | Color                  | Style    |
 |-------------------|--------------|------------------------|----------|
 | Navigation item   | `--icon-sm`  | `--text-secondary`     | Outline  |
-| Navigation active | `--icon-sm`  | `--accent-primary`     | Outline  |
+| Navigation active | `--icon-sm`  | `rgba(165,188,224,1)`  | Outline  |
 | Button (with text)| `--icon-sm`  | Inherits button color  | Outline  |
-| Button (icon-only)| `--icon-md`  | `--text-primary`       | Outline  |
-| Table row action  | `--icon-sm`  | `--text-secondary`     | Outline  |
-| Empty state       | `--icon-xl`  | `--aurora-teal` at 40% | Outline  |
+| Button (icon-only)| `--icon-md`  | `rgba(165,188,224,1)`  | Outline  |
+| Table row action  | `--icon-sm`  | `rgba(165,188,224,0.80)` | Outline |
+| Empty state       | `--icon-xl`  | `rgba(165,188,224,0.70)` | Outline |
 
 ---
 
