@@ -56,6 +56,11 @@ What this agent must not do.
 ## Workflow
 Short step-by-step process (3 to 7 steps).
 
+If necessary, Use multiple workflow sections when the agent has distinct modes, for example:
+## Ingest Workflow
+## Query Workflow
+## Lint Workflow
+
 ## Output
 What the agent must produce.
 
@@ -69,8 +74,10 @@ Quick checks before finishing.
 2. Prefer short bullets over long prose.
 3. Remove repeated policy text if it is already covered in global instructions.
 4. Keep workflows concrete and executable.
-5. Keep Skills and Rules short and specific.
-6. Do not mix planning, design, and coding rules in one long section.
+5. An agent may define multiple workflow sections if it has clearly distinct operating modes.
+6. If using multiple workflows, name each section as [Mode] Workflow and keep each one short and actionable.
+7. Keep Skills and Rules short and specific.
+8. Do not mix planning, design, and coding rules in one long section.
 
 ## Tools: Keep Only What Is Needed
 
@@ -126,6 +133,15 @@ tools: [read, search, edit, vscode/askQuestions, vscode/memory]
 3. Execute the task.
 4. Verify result.
 
+<!-- Optional: use multiple mode-specific workflows instead of a single Workflow section -->
+<!--
+## Ingest Workflow
+1. ...
+
+## Query Workflow
+1. ...
+-->
+
 ## Output
 - Expected deliverables.
 
@@ -141,7 +157,7 @@ tools: [read, search, edit, vscode/askQuestions, vscode/memory]
 2. Keep only required fields plus truly needed optional fields.
 3. Rewrite all descriptions to one-line Use when: ... format.
 4. Remove duplicated rule text that repeats global instructions.
-5. Apply the same seven body sections to every agent.
+5. Apply the same required body structure to every agent (single Workflow or multiple [Mode] Workflow sections).
 6. Reduce oversized files by removing redundant content.
 7. Keep tool lists lean and role-specific.
 
@@ -152,5 +168,6 @@ Your agent set is simple when:
 - Every file follows the same shape.
 - Every description is clear in one line.
 - Every workflow is short and actionable.
+- Agents with multi-mode behavior may use multiple [Mode] Workflow sections instead of one generic Workflow section.
 - Every tool list is minimal.
 - No agent contains large duplicated policy blocks.
